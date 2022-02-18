@@ -1,2 +1,1 @@
-# bash-drilling
-Repository for learning Bash scripting 
+# Bash mini projects and scripts 
