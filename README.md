@@ -1,1 +1,1 @@
-# Bash mini projects and scripts 
+# Bash mini projects and scripts.  
