@@ -25,15 +25,13 @@ function checkIfWinnerPresent(){
 }
 
 function printResultAndEndGame(){
-    if [ ${1} == "X" ] || [ ${1} == "O" ]; then
         echo ""
-        echo "Congratulations the winner is: " $1 " !"
         echo ""
-        echo "MOVE COUNTER: " $2
+        displayCurrentTab
+        echo "Congratulations the winner is: " $1 "!!!"
+        echo ""
         echo "" 
         exit 1
-    fi
-    
 }
 
 function checkIfCellAlreadyFilled(){
@@ -77,18 +75,17 @@ function startRound(){
     checkIfCellAlreadyFilled $CHOICE 
     VAL_RESULT=$?
 
-    if [ ${VAL_RESULT} == 2 ] ; then
+    if [ ${VAL_RESULT} -eq 2 ] ; then
         fillTheGap $CHOICE $CURRENT_PLAYER
         checkIfWinnerPresent
         WINNER=$?
-        echo "COUNTER REACHED" $MOVE_COUNTER
 
-        if [ ${WINNER}==1 ]; then
-        printResultAndEndGame $WINNER $MOVE_COUNTER 
+        if [ ${WINNER} -eq 1 ]; then
+        printResultAndEndGame $CURRENT_PLAYER
         fi 
 
-        if [ ${MOVE_COUNTER}==8 ]; then
-        echo "COUNTER REACHED" $MOVE_COUNTER
+        if [ ${MOVE_COUNTER} -eq 8 ]; then
+        displayCurrentTab
         echo ""
         echo "THERE IS A DRAW !"
         exit 1
@@ -111,7 +108,7 @@ function main() {
     startRound "X"  
 }
 
-MOVE_COUNTER = 0
+MOVE_COUNTER=0
 mainArray=(1 2 3 4 5 6 7 8 9)
 main
 
