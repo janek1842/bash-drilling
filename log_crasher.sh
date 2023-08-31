@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Bash script for facilitating the process of analyzing large amount of data gathered in log files 
-# by sharing the most common operations used during log processing with awk, sed and grep options 
+# by sharing the most common operations used during log processing with awk, sed and grep options
+# Logs can be taken i.e. from https://github.com/logpai/loghub 
 
 function pathGiver() {
     echo "PLEASE ENTER THE DIRECTORY NAME THAT CONTAINS THE ANALYZED DATA: "
