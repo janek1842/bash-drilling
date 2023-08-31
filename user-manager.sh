@@ -2,7 +2,6 @@
 
 # Script for automated user adding and deletion and even more :)
 # Please remember some of the features of this script can be run only with running this script with sudo permissions
-# Work in progress ... 
 
 function displayUsers() {
 	awk -F: '{ print $1}' /etc/passwd
