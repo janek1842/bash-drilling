@@ -8,3 +8,4 @@ This repository aggregates some of my self-made bash scripts that I develop to e
 - **mini-calc.sh** basic math operations program 
 - **user-manager.sh** user management operations program 
 - **ls_viever.sh** program that enables fast lookup operations in your file structure with ls automation  
+- **area_volume.sh** basic figure properties calculation
